@@ -1,0 +1,14 @@
+=== ForgeOS Dynamic Memory & Command History System ===
+Supports: Dynamic Buffer Resizing, Up/Down Arrow Navigation, 'history', 'exit'
+
+ForgeOS-History$ echo test
+[Executed]: echo test
+ForgeOS-History$ uname -r
+[Executed]: uname -r
+ForgeOS-History$ history
+--- Stored Command History ---
+ 1: echo test
+ 2: uname -r
+ 3: history
+ForgeOS-History$ exit
+[ForgeOS] Exiting session and freeing allocated memory.
