@@ -1,0 +1,47 @@
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \250\2\0\0\0\0\0"..., 832) = 832
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+close(3)                                = 0
+openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+read(3, "nodev\tsysfs\nnodev\ttmpfs\nnodev\tbd"..., 1024) = 442
+close(3)                                = 0
+openat(AT_FDCWD, "/proc/mounts", O_RDONLY|O_CLOEXEC) = 3
+read(3, "none /usr/lib/modules/6.18.33.2-"..., 1024) = 1024
+read(3, "e 0 0\ndevpts /dev/pts devpts rw,"..., 1024) = 1024
+read(3, "osuid,nodev,noexec,relatime,nosy"..., 1024) = 1024
+read(3, "s /mnt/wslg/run/user/1000 tmpfs "..., 1024) = 118
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+read(3, "62a89a142000-62a89a234000 r--p 0"..., 1024) = 1024
+read(3, "53fe000-7d59953ff000 r--p 000a90"..., 1024) = 1024
+read(3, "64-linux-gnu/libm.so.6\n7d59956d8"..., 1024) = 1024
+read(3, ".so.1\n7d5995781000-7d59957a2000 "..., 1024) = 1024
+read(3, "x-gnu/ld-linux-x86-64.so.2\n7d599"..., 1024) = 517
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/coreutils/locales/uucore/en-US.ftl", O_RDONLY|O_CLOEXEC) = 3
+read(3, "# Common strings shared across a"..., 4080) = 4080
+read(3, "", 32)                         = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/coreutils/locales/cat/en-US.ftl", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "2520030203_Practical/Practical 2/sample.txt", O_RDONLY|O_CLOEXEC) = 3
+Operating Systems and System Programming (OSSP)
+Practical 2: Low-Level File I/O and System Call Tracing
+User Space <-> Kernel Space Transitions via Software Interrupts / sysenter.
+close(5)                                = 0
+close(4)                                = 0
+close(3)                                = 0
++++ exited with 0 +++

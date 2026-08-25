@@ -1,0 +1,1 @@
+File copy successful. Transferred 180 bytes from '2520030203_Practical/Practical 2/sample.txt' to '2520030203_Practical/Practical 2/outputs/copied_sample.txt'.

@@ -1,0 +1,23 @@
+File copy successful. Transferred 180 bytes from '2520030203_Practical/Practical 2/sample.txt' to '2520030203_Practical/Practical 2/outputs/test_copy.txt'.
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 25.41    0.000387         387         1           execve
+ 13.85    0.000211          52         4           openat
+ 11.82    0.000180          22         8           mmap
+ 10.18    0.000155         155         1           prlimit64
+  5.84    0.000089          22         4           close
+  5.06    0.000077          25         3           brk
+  4.92    0.000075          37         2           write
+  4.46    0.000068          22         3           read
+  4.14    0.000063          21         3           fstat
+  3.09    0.000047          15         3           mprotect
+  2.43    0.000037          18         2           pread64
+  2.30    0.000035          35         1           munmap
+  1.38    0.000021          21         1         1 access
+  1.18    0.000018          18         1           arch_prctl
+  1.18    0.000018          18         1           set_robust_list
+  1.18    0.000018          18         1           rseq
+  1.12    0.000017          17         1           set_tid_address
+  0.46    0.000007           7         1           getrandom
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.001523          37        41         1 total

@@ -1,0 +1,3 @@
+Operating Systems and System Programming (OSSP)
+Practical 2: Low-Level File I/O and System Call Tracing
+User Space <-> Kernel Space Transitions via Software Interrupts / sysenter.
