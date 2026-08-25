@@ -1,4 +1,7 @@
-﻿*.o
+*.o
 *.out
-*.exe
-.DS_Store
+process_control
+shell_loop
+command_runner
+file_copy
+history_manager
