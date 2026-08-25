@@ -1,0 +1,7 @@
+=== ForgeOS Interactive Shell Interface ===
+Type commands, test backspace editing, or type 'exit' to terminate.
+
+ForgeOS$ test_keystroke
+[ForgeOS Execution]: Command 'test_keystroke' captured and processed successfully.
+ForgeOS$ exit
+[ForgeOS] Terminating interactive main loop. Goodbye!
