@@ -1,0 +1,25 @@
+top - 18:20:27 up  3:38,  1 user,  load average: 0.01, 0.02, 0.00
+Tasks:  27 total,   1 running,  26 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.8 sy,  0.0 ni, 99.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   7784.6 total,   7029.3 free,    583.7 used,    325.0 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7200.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0   24332  15464  11596 S   0.0   0.2   0:01.00 systemd
+      2 root      20   0    3180   2212   2072 S   0.0   0.0   0:00.01 init-sy+
+      6 root      20   0    3180   2044   1940 S   0.0   0.0   0:00.00 init
+     46 root      19  -1   50400  16808  15496 S   0.0   0.2   0:00.49 systemd+
+     78 systemd+  20   0   22416  14488  11988 S   0.0   0.2   0:00.10 systemd+
+     84 root      20   0   35364  12256   9160 S   0.0   0.2   0:01.67 systemd+
+    104 root      20   0    2888   1940   1816 S   0.0   0.0   0:00.02 chronyd+
+    105 root      20   0    4472   3116   2868 S   0.0   0.0   0:00.05 cron
+    106 message+  20   0    8824   5432   4708 S   0.0   0.1   0:00.10 dbus-da+
+    110 root      20   0   44096  29780  14636 S   0.0   0.4   0:00.22 network+
+    130 root      20   0   18440   9448   8204 S   0.0   0.1   0:00.15 systemd+
+    173 syslog    20   0  220548   5860   4576 S   0.0   0.1   0:00.12 rsyslogd
+    193 root      20   0    5492   2732   2548 S   0.0   0.0   0:00.01 agetty
+    206 _chrony   20   0   20424   7128   6316 S   0.0   0.1   0:00.24 chronyd
+    216 _chrony   20   0   12096   2440   1792 S   0.0   0.0   0:00.00 chronyd
+    259 root      20   0  123460  32636  18028 S   0.0   0.4   0:00.17 unatten+
+    313 root      20   0    3196   1120    980 S   0.0   0.0   0:00.00 Session+
+    314 root      20   0    3196   1252   1108 S   0.0   0.0   0:00.12 Relay(3+

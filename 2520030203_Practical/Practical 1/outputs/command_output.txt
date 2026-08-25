@@ -1,0 +1,7 @@
+=== Linux OS Command Execution System ===
+Enter a Linux command to execute (e.g., 'ls -l', 'uname -a'): Linux techno 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+
+[Parent Process] PID: 2469 is preparing to fork child...
+[Parent Process] Waiting for Child PID: 2470 to finish...
+
+[Parent Process] Child process terminated with status code: 0

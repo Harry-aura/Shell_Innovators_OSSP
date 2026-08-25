@@ -1,0 +1,70 @@
+PRACTICAL 1
+
+TITLE:
+Linux Process Execution via fork(), exec(), wait(), and Hardware Abstraction Investigation
+
+OBJECTIVES:
+1. Construct a C program accepting dynamic shell commands.
+2. Spawn child execution context utilizing fork().
+3. Replace child address space with user command using execvp().
+4. Synchronize parent execution flow using waitpid().
+5. Display process identifier tracking (PID and PPID).
+6. Investigate system architecture using uname, lscpu, lsblk, ps, and top.
+7. Document hardware abstraction mechanisms across CPU, Memory, Storage, and I/O.
+
+PROGRAM:
+src/command_runner.c
+
+MAKEFILE:
+Makefile
+
+HARDWARE & OPERATING SYSTEM ABSTRACTION REPORT:
+
+1. CPU Abstraction:
+- Hardware Component: Physical CPU Cores, Hyperthreads, Cache (L1/L2/L3), Architecture registers.
+- OS Service / Subsystem: Process Scheduler (Completely Fair Scheduler - CFS), Process Control Blocks (task_struct).
+- Abstraction Mechanism: Time-slicing and context switching present virtualized CPU execution threads to user tasks.
+- Inspection Tool: lscpu, top.
+
+2. Memory Abstraction:
+- Hardware Component: Physical RAM and Memory Management Unit (MMU).
+- OS Service / Subsystem: Virtual Memory Manager (VMM), Page Tables, Swap Space.
+- Abstraction Mechanism: Grants each process an isolated 64-bit flat virtual address space, translating virtual pages to physical frames on demand.
+- Inspection Tool: top, ps -eo pmem.
+
+3. Storage & Block Device Abstraction:
+- Hardware Component: NVMe SSDs, SATA Disks, Flash Storage.
+- OS Service / Subsystem: Virtual File System (VFS), Block Device Drivers, Ext4/XFS File Systems.
+- Abstraction Mechanism: Hides raw sector addressing behind hierarchical directory trees and uniform POSIX file descriptors (open, read, write).
+- Inspection Tool: lsblk.
+
+4. I/O & Device Abstraction:
+- Hardware Component: Keyboard, Display Controller, Terminals, Network Interfaces.
+- OS Service / Subsystem: Character Device Drivers, Terminal Subsystem (termios), Interrupt Handlers.
+- Abstraction Mechanism: Presents hardware devices as file nodes under /dev (e.g., /dev/tty, /dev/pts), managed via standard I/O streams.
+- Inspection Tool: uname -a, ps.
+
+COMMAND WORKFLOW:
+1. Build Target:
+   make clean && make
+
+2. Execute Program:
+   ./command_runner
+
+3. Hardware Inspection Commands:
+   uname -a
+   lscpu
+   lsblk
+   ps -eo pid,ppid,pmem,pcpu,comm
+   top -b -n 1
+
+OUTPUT ARTIFACTS:
+- outputs/kernel_info.txt
+- outputs/cpu_hardware.txt
+- outputs/storage_block.txt
+- outputs/process_snapshot.txt
+- outputs/top_metrics.txt
+- outputs/command_output.txt
+- screenshots/screenshot1.png
+- screenshots/screenshot2.png
+- screenshots/screenshot3.png
