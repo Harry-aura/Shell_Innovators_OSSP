@@ -22,7 +22,5 @@
     362       1 Ss   /usr/lib/systemd/systemd --user
     364     362 S    (sd-pam)
     389     316 Ss+  -bash
-    856       1 Ssl  /usr/libexec/wsl-pro-service
-    960       1 Ssl  /usr/libexec/packagekitd
     965       1 Ssl  /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
-   1122     315 R+   ps -eo pid,ppid,stat,command
+   1541     315 R+   ps -eo pid,ppid,stat,command

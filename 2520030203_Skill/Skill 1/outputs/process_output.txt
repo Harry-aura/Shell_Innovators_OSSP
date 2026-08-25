@@ -1,0 +1,59 @@
+total 216
+drwxr-x--- 19 harivikash_katta harivikash_katta  4096 Aug 25 15:03 .
+drwxr-xr-x  3 root             root              4096 Jul 23 03:53 ..
+-rw-r--r--  1 harivikash_katta harivikash_katta  4086 Aug 25 15:03 .bash_history
+-rw-r--r--  1 harivikash_katta harivikash_katta   220 Aug 25 15:03 .bash_logout
+-rw-r--r--  1 harivikash_katta harivikash_katta  3771 Aug 25 15:03 .bashrc
+drwxr-x---  4 harivikash_katta harivikash_katta  4096 Aug 25 15:03 .cache
+drwxr-xr-x  3 harivikash_katta harivikash_katta  4096 Aug 25 15:03 .config
+drwxr-xr-x  7 harivikash_katta harivikash_katta  4096 Aug 25 15:20 .git
+-rw-r--r--  1 harivikash_katta harivikash_katta    67 Aug 25 15:03 .gitconfig
+-rw-r--r--  1 harivikash_katta harivikash_katta    29 Aug 25 15:03 .gitignore
+drwxr-xr-x  3 harivikash_katta harivikash_katta  4096 Jul 30 03:41 .local
+-rw-r--r--  1 harivikash_katta harivikash_katta     0 Aug 25 15:03 .motd_shown
+-rw-r--r--  1 harivikash_katta harivikash_katta   807 Aug 25 15:03 .profile
+-rw-r--r--  1 harivikash_katta harivikash_katta   669 Aug 25 15:03 .viminfo
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 2520030196_Practical
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 2520030196_Skill
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 2520030203_Practical
+drwxr-xr-x  4 harivikash_katta harivikash_katta  4096 Aug 25 15:16 2520030203_Skill
+drwxr-xr-x  4 harivikash_katta harivikash_katta  4096 Aug 25 15:03 ForgeOS
+-rw-r--r--  1 harivikash_katta harivikash_katta   184 Aug 25 15:03 Makefile
+-rwxr-xr-x  1 harivikash_katta harivikash_katta 16168 Aug 25 15:03 a.out
+-rw-r--r--  1 harivikash_katta harivikash_katta     0 Aug 25 15:03 b2
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 14:13 build
+-rw-r--r--  1 harivikash_katta harivikash_katta   243 Aug 25 15:03 class.c
+-rw-r--r--  1 harivikash_katta harivikash_katta   246 Aug 25 15:03 class1.c
+-rw-r--r--  1 harivikash_katta harivikash_katta   273 Aug 25 15:03 class2.c
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 dir1
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 dir2
+-rw-r--r--  1 harivikash_katta harivikash_katta    56 Aug 25 15:03 ex1
+-rw-r--r--  1 harivikash_katta harivikash_katta    86 Aug 25 15:03 exece1.c
+-rw-r--r--  1 harivikash_katta harivikash_katta    80 Aug 25 15:03 exece2.c
+-rw-r--r--  1 harivikash_katta harivikash_katta   126 Aug 25 15:03 exece3.c
+-rw-r--r--  1 harivikash_katta harivikash_katta    46 Aug 25 15:03 f1
+-rw-r--r--  1 harivikash_katta harivikash_katta     6 Aug 25 15:03 f101
+-rw-r--r--  1 harivikash_katta harivikash_katta    23 Aug 25 15:03 f2
+-rw-r--r--  1 harivikash_katta harivikash_katta   380 Aug 25 15:03 fork.c
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 linux_task4
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 14:13 logs
+-rw-r--r--  1 harivikash_katta harivikash_katta   241 Aug 25 15:03 mvx.c
+-rw-r--r--  1 harivikash_katta harivikash_katta   288 Aug 25 15:03 open.c
+-rw-r--r--  1 harivikash_katta harivikash_katta   262 Aug 25 15:03 open3.c
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 outputs
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 permission_lab
+-rw-r--r--  1 harivikash_katta harivikash_katta   220 Aug 25 15:03 pipe1.c
+-rw-r--r--  1 harivikash_katta harivikash_katta   225 Aug 25 15:03 pipe2.c
+-rw-r--r--  1 harivikash_katta harivikash_katta   238 Aug 25 15:03 pipe3.c
+-rwxr-xr-x  1 harivikash_katta harivikash_katta 16352 Aug 25 15:03 process_control
+-rw-r--r--  1 harivikash_katta harivikash_katta   190 Aug 25 15:03 read.c
+-rw-r--r--  1 harivikash_katta harivikash_katta    39 Aug 25 15:03 readwr.c
+drwxr-xr-x  2 harivikash_katta harivikash_katta  4096 Aug 25 15:03 src
+=== Process Lifecycle Demo ===
+[PARENT] Running with PID: 1547
+
+[PARENT] Spawning child and waiting...
+
+
+[CHILD] Execution finished.
+[PARENT] Child exited, terminating parent process.
