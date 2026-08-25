@@ -1,0 +1,72 @@
+SKILL 1
+
+TITLE:
+Process Abstraction, fork(), exec(), Parent-Child Relationships and System Call Tracing
+
+OBJECTIVES:
+1. Setup and verify Linux VM environment.
+2. Configure GCC development toolchain.
+3. Establish Git version control repository.
+4. Organize modular project architecture.
+5. Analyze UNIX shell architecture.
+6. Construct initial build Makefile.
+7. Understand kernel process abstraction.
+8. Implement process spawning using fork().
+9. Execute binary images using exec() family.
+10. Inspect parent-child process relationships.
+11. Visualize hierarchical process tree.
+12. Perform runtime system call tracing with strace.
+
+PROGRAM:
+src/process_control.c
+
+MAKEFILE:
+Makefile
+
+PROCESS CONCEPTS:
+
+1. Process Abstraction:
+- Represents an active program executing inside virtual memory.
+- Managed by kernel data structures (Process Control Block) storing PID, PPID, and state.
+
+2. Process Creation (fork):
+- fork() clones the caller process into a child process.
+- The parent process receives the child's PID, and the child receives 0.
+- getpid() retrieves current PID; getppid() retrieves parent PID.
+
+3. Program Execution (exec):
+- The exec() family replaces the calling process image with a new executable.
+- Retains existing PID while resetting program counter and memory mappings.
+- Commonly paired with fork() to execute external binaries concurrently.
+
+4. Parent-Child Relationship & Synchronization:
+- Parent manages child termination status using the wait() / waitpid() system calls.
+- Prevents resource leaks and orphan/zombie process accumulation.
+
+5. Process Tree Hierarchy:
+- Maps all running OS tasks hierarchically rooted at init/systemd.
+- Inspected using pstree and formatted ps listings.
+
+6. System Call Tracing:
+- The strace utility captures boundary transitions between user space and kernel space.
+- Tracks execution flow across core system calls (clone, execve, wait4, read, write).
+
+COMMAND EXECUTION & WORKFLOW:
+1. Build Target:
+   make clean && make
+
+2. Execute Program:
+   ./process_control
+
+3. Tree Inspection:
+   pstree -p $$
+
+4. System Call Trace:
+   strace -e clone,execve,wait4 ./process_control
+
+OUTPUT ARTIFACTS:
+- outputs/process_tree.txt
+- outputs/process_output.txt
+- screenshots/screenshot1.png
+- screenshots/screenshot2.png
+- screenshots/screenshot3.png
