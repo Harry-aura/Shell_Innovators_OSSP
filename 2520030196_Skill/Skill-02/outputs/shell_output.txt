@@ -1,0 +1,10 @@
+=== ForgeOS Interactive Shell Interface ===
+Type commands, test backspace editing, or type 'exit' to terminate.
+
+ForgeOS$ echo ForgeOS
+[ForgeOS Execution]: Command 'echo ForgeOS' captured and processed successfully.
+ForgeOS$ ls -la
+[ForgeOS Execution]: Command 'ls -la' captured and processed successfully.
+ForgeOS$ exit
+[ForgeOS] Terminating interactive main loop. Goodbye!
+

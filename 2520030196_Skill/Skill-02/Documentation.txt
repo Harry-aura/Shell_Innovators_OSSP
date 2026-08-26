@@ -1,0 +1,48 @@
+SKILL 2
+
+TITLE:
+Interactive Shell Command Loop, Raw Mode Terminal I/O, and Keystroke Processing
+
+OBJECTIVES:
+1. Implement a persistent Read-Eval-Print Loop (REPL) for custom shell interactions.
+2. Transition the terminal between Canonical and Non-Canonical (Raw) modes using termios.
+3. Intercept individual keystrokes without waiting for line buffering or enter keypresses.
+4. Process ASCII backspace (127 and \b) to dynamically adjust terminal display and buffer length.
+5. Prevent buffer overflows and sanitize user input before command dispatch.
+6. Provide graceful exit handling on user commands ("exit") or EOF signals (Ctrl+D).
+
+PROGRAM:
+src/shell_loop.c
+
+MAKEFILE:
+Makefile
+
+TECHNICAL ARCHITECTURE & IMPLEMENTATION DETAILS:
+
+1. Terminal I/O Modes:
+- Canonical Mode (Default): Input is line-buffered and processed only after pressing Return.
+- Raw Mode: Disables ICANON and ECHO flags via termios. Keystrokes are sent directly to the process byte-by-byte.
+
+2. Dynamic Line Editing & Backspace Handling:
+- When ASCII 127 or '\b' is captured, the internal buffer pointer is decremented.
+- The escape sequence "\b \b" is printed to erase the character visually from stdout.
+
+3. Execution Flow:
+- read() gathers keystrokes into a dynamically managed buffer.
+- On Return/Enter ('\n'), input is null-terminated and dispatched for parsing.
+- Built-in commands like 'exit' terminate the loop and restore original termios settings.
+
+COMMAND WORKFLOW:
+1. Build Target:
+   make clean && make
+
+2. Execute Shell:
+   ./shell_loop
+
+OUTPUT ARTIFACTS:
+- outputs/shell_output.txt
+- outputs/input_trace.txt
+- screenshots/screenshot1.png
+- screenshots/screenshot2.png
+- screenshots/screenshot3.png
+

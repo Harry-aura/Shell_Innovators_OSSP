@@ -1,0 +1,58 @@
+PRACTICAL 3
+
+TITLE:
+Dynamic Memory Allocation, ANSI Escape Sequence Processing, Command History Linked List, and Valgrind Verification
+
+OBJECTIVES:
+1. Parse ANSI escape sequences (\033[A and \033[B) for interactive up/down arrow history recall.
+2. Maintain command history using a dynamic doubly linked list (HistoryNode).
+3. Implement dynamic input buffer allocation using malloc() and realloc() with geometric resizing.
+4. Prevent buffer overflows and underflows during keystroke and backspace processing.
+5. Deallocate all dynamic nodes and line buffers cleanly using free().
+6. Verify heap memory integrity, zero leaks, and leak-free termination using Valgrind.
+
+PROGRAM:
+src/history_manager.c
+
+MAKEFILE:
+Makefile
+
+DYNAMIC MEMORY & HISTORY MANAGEMENT REPORT:
+
+1. Dynamic Array & Buffer Resizing Strategy:
+- The input buffer starts with a small default capacity (4 bytes).
+- As keystrokes arrive, if length reaches capacity - 1, realloc() doubles the allocation capacity (geometric growth).
+- This avoids arbitrary buffer limitations and guarantees overflow prevention.
+
+2. ANSI Escape Sequence Handling:
+- Keystrokes are monitored in unbuffered raw terminal mode (termios).
+- The escape byte (ASCII 27 / \033) flags an incoming multi-byte control sequence.
+- Sequence '[' followed by 'A' triggers history navigation backwards (prev node).
+- Sequence '[' followed by 'B' triggers history navigation forwards (next node).
+- Buffer contents and visual terminal output (\b \b) are synchronized dynamically.
+
+3. Doubly Linked List Structure:
+- Each executed command string is duplicated with strdup() and stored in a heap-allocated HistoryNode.
+- Maintains head and tail pointers for O(1) appending and bidirectional traversal.
+
+4. Valgrind Memory Audit:
+- Verifies that all allocated heap blocks are explicitly freed before process exit.
+- Confirms 0 bytes in 0 blocks leaked at exit (clean heap summary).
+
+COMMAND WORKFLOW:
+1. Build Target:
+   make clean && make
+
+2. Execute Program:
+   ./history_manager
+
+3. Memory Audit:
+   valgrind --leak-check=full --show-leak-kinds=all ./history_manager
+
+OUTPUT ARTIFACTS:
+- outputs/valgrind_report.txt
+- outputs/history_log.txt
+- screenshots/screenshot1.png
+- screenshots/screenshot2.png
+- screenshots/screenshot3.png
+

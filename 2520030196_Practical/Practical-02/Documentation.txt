@@ -1,0 +1,63 @@
+PRACTICAL 2
+
+TITLE:
+Low-Level File I/O System Calls (open, read, write, close) and System Call Tracing with strace
+
+OBJECTIVES:
+1. Implement a low-level file copying program in C using direct POSIX system calls.
+2. Manage file descriptors and permissions using open() flags (O_RDONLY, O_WRONLY, O_CREAT, O_TRUNC).
+3. Transfer data streams using unbuffered read() and write() loops.
+4. Release kernel file table entries cleanly using close().
+5. Analyze user space to kernel space context switching mechanics.
+6. Trace runtime system calls using strace utility on the 'cat' command and file copier.
+7. Identify and document kernel subsystem interactions (VFS, Page Cache, Device Drivers).
+
+PROGRAM:
+src/file_copy.c
+
+MAKEFILE:
+Makefile
+
+SYSTEM CALL ARCHITECTURE & KERNEL SPACE TRANSITION REPORT:
+
+1. User Space vs. Kernel Space Boundary:
+- User Space (Ring 3): Unprivileged execution mode where user applications reside with isolated virtual memory.
+- Kernel Space (Ring 0): Privileged execution mode with direct hardware access, scheduling controls, and memory structures.
+
+2. Control Transition Mechanics:
+- When open(), read(), or write() is invoked, the C library puts the system call opcode into the CPU register (e.g., RAX on x86_64).
+- A CPU instruction (syscall / sysenter) triggers a software interrupt, switching the processor execution level from Ring 3 to Ring 0.
+- The CPU hardware switches from the user stack to the kernel mode stack and transfers control to the System Call Dispatcher.
+- The kernel validates arguments, performs security/permission checks, executes the driver/VFS operation, and writes return values into CPU registers.
+- The sysret / iret instruction restores user context and returns execution back to Ring 3.
+
+3. System Call Sequence Analysis for 'cat sample.txt':
+- execve(): Loads and initializes the 'cat' binary executable image into memory.
+- brk() / mmap(): Allocates heap and memory-mapped pages for process memory and shared libraries (libc.so).
+- openat(): Traverses VFS paths and retrieves a file descriptor associated with sample.txt.
+- read(): Copies blocks of data from kernel page cache into user space buffer.
+- write(): Transfers buffer contents to Standard Output (file descriptor 1 / stdout).
+- close(): Deallocates the file descriptor reference from the process open-file table.
+
+COMMAND WORKFLOW:
+1. Build Target:
+   make clean && make
+
+2. Execute File Copy:
+   ./file_copy sample.txt outputs/copied_sample.txt
+
+3. Trace System Calls on cat:
+   strace -e trace=openat,read,write,close cat sample.txt
+
+4. System Call Summary Statistics:
+   strace -c ./file_copy sample.txt outputs/copied_sample.txt
+
+OUTPUT ARTIFACTS:
+- outputs/copied_sample.txt
+- outputs/copy_log.txt
+- outputs/strace_cat.txt
+- outputs/syscall_summary.txt
+- screenshots/screenshot1.png
+- screenshots/screenshot2.png
+- screenshots/screenshot3.png
+
